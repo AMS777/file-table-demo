@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { FileTable } from '../../components/fileTable';
+
 import './styles.scss';
 
 function Homepage() {
@@ -16,6 +18,7 @@ function Homepage() {
         </p>
         <p>It uses functional tests with Cypress.</p>
       </article>
+      <FileTable />
     </div>
   );
 }
