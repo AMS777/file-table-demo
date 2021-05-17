@@ -7,12 +7,11 @@ describe('Table', () => {
 
   it('visits url', () => {
     cy.visit(urls.homepage);
-
   });
 
-  it('has title and description', () => {
+  it('has all the elements', () => {
+    cy.get(ids.homepage.border).should('exist');
     cy.get(ids.homepage.title).should('exist');
     cy.get(ids.homepage.description).should('exist');
   });
-
 });

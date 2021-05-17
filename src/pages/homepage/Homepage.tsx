@@ -1,8 +1,10 @@
 import * as React from 'react';
 
+import './styles.scss';
+
 function Homepage() {
   return (
-    <>
+    <div className="homepage-border" data-test="homepage-border">
       <h1 data-test="homepage-title">File Table Demo</h1>
       <article data-test="homepage-description">
         <p>
@@ -14,7 +16,7 @@ function Homepage() {
         </p>
         <p>It uses functional tests with Cypress.</p>
       </article>
-    </>
+    </div>
   );
 }
 
