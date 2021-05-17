@@ -16,7 +16,7 @@ function FileTableBody({ files = [] }: FileTableBodyProps) {
           <td>{file.device}</td>
           <td>{file.path}</td>
           <td></td>
-          <td>{file.status}</td>
+          <td className="file-table-status">{file.status}</td>
         </tr>
       ))}
     </tbody>

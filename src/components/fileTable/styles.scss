@@ -1,8 +1,30 @@
+@import '../../styles/variables';
+
 #file-table {
   width: 100%;
+  border-spacing: 0;
+  border: 1px solid $border-color-primary;
 
   th {
+    padding: 0.8em 0.2em;
+    text-align: left;
     font-weight: normal;
     font-size: 1.2em;
+  }
+
+  tbody {
+    tr:hover {
+      background-color: $background-color-primary;
+      cursor: pointer;
+    }
+
+    td {
+      padding: 0.8em 0.2em;
+      border-top: 1px solid $border-color-primary;
+    }
+
+    .file-table-status {
+      text-transform: capitalize;
+    }
   }
 }
