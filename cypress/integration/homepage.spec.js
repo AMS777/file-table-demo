@@ -1,6 +1,6 @@
 import { urls, ids } from '../support/config';
 
-describe('Table', () => {
+describe('Homepage', () => {
   beforeEach(() => {
     cy.visit(urls.homepage);
   });
