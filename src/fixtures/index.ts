@@ -1,0 +1,1 @@
+export { filesFixture } from './files';
