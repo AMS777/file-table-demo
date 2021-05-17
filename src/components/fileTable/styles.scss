@@ -26,5 +26,13 @@
     .file-table-status {
       text-transform: capitalize;
     }
+
+    .file-status-available {
+      display: block;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      background-color: $file-status-available;
+    }
   }
 }

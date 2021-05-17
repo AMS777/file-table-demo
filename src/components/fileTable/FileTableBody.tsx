@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { File } from '../../interfaces';
+import { FILE_STATUS_AVAILABLE } from '../../config/CONSTANTS';
 
 interface FileTableBodyProps {
   files: File[];
@@ -17,7 +18,11 @@ function FileTableBody({ files = [] }: FileTableBodyProps) {
           <td>{file.name}</td>
           <td>{file.device}</td>
           <td>{file.path}</td>
-          <td></td>
+          <td>
+            {file.status === FILE_STATUS_AVAILABLE && (
+              <span className="file-status-available"></span>
+            )}
+          </td>
           <td className="file-table-status">{file.status}</td>
         </tr>
       ))}
