@@ -15,7 +15,7 @@ describe('File table', () => {
     cy.get(ids.fileTable.columns.statusIcon).should('exist');
   });
 
-  it('has file rows', () => {
+  it('has file rows with data', () => {
     cy.get(ids.fileTable.row).should('contain', texts.devices[0]);
     cy.get(ids.fileTable.row).should('contain', texts.devices[1]);
   });
