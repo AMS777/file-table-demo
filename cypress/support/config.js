@@ -18,5 +18,10 @@ export const ids = {
       status: '[data-test=file-table-status]',
       statusIcon: '[data-test=file-table-status-icon]',
     },
+    row: '[data-test=file-table-row]',
   },
+};
+
+export const texts = {
+  devices: ['Stark', 'Baratheon'],
 };
