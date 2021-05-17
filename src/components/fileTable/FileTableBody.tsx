@@ -11,7 +11,9 @@ function FileTableBody({ files = [] }: FileTableBodyProps) {
     <tbody>
       {files.map((file: File) => (
         <tr key={file.name} data-test="file-table-row">
-          <td></td>
+          <td>
+            <input type="checkbox" />
+          </td>
           <td>{file.name}</td>
           <td>{file.device}</td>
           <td>{file.path}</td>
