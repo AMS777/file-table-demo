@@ -24,7 +24,7 @@ function FileTableRow({ file, handleSelectFile }: FileTableRowProps) {
       onClick={handleRowClick}
     >
       <td>
-        <input type="checkbox" checked={isRowSelected} />
+        <input type="checkbox" checked={isRowSelected} readOnly />
       </td>
       <td>{file.name}</td>
       <td>{file.device}</td>

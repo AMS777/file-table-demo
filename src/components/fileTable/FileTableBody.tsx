@@ -13,7 +13,7 @@ function FileTableBody({ files = [], handleSelectFile }: FileTableBodyProps) {
   return (
     <tbody>
       {files.map((file: File) => (
-        <FileTableRow file={file} handleSelectFile={handleSelectFile} />
+        <FileTableRow key={file.device} file={file} handleSelectFile={handleSelectFile} />
       ))}
     </tbody>
   );

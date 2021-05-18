@@ -7,6 +7,20 @@
   header {
     padding: 1em;
     border-bottom: 1px solid $border-color-primary;
+
+    button {
+      margin: -1em 1em;
+      padding: 0.7em 1em;
+      border: none;
+      border-radius: 0.3em;
+      font-size: 1em;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $background-color-primary;
+        cursor: pointer;
+      }
+    }
   }
 
   table {
