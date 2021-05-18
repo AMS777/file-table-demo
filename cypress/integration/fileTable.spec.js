@@ -19,4 +19,8 @@ describe('File table', () => {
     cy.get(ids.fileTable.row).should('contain', texts.devices[0]);
     cy.get(ids.fileTable.row).should('contain', texts.devices[1]);
   });
+
+  it('click on a row selects it', () => {
+    cy.get(ids.fileTable.row).first().click().find(':checkbox').should('be.checked');
+  });
 });
