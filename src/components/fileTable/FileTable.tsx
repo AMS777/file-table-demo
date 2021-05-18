@@ -7,6 +7,8 @@ import { filesFixture } from '../../fixtures';
 import FileTableHead from './FileTableHead';
 import FileTableBody from './FileTableBody';
 
+import DownloadIcon from '../../images/download.svg';
+
 import './styles.scss';
 
 function FileTable() {
@@ -47,7 +49,10 @@ function FileTable() {
     <div id="file-table" data-test="homepage-border">
       <header>
         Selected {selectedFiles.size}{' '}
-        <button onClick={handleDownloadFiles}>Download Selected</button>
+        <button onClick={handleDownloadFiles}>
+          <img src={DownloadIcon} alt="icon" />
+          Download Selected
+        </button>
       </header>
       <table data-test="file-table">
         <FileTableHead />

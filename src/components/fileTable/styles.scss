@@ -20,6 +20,12 @@
         background-color: $background-color-primary;
         cursor: pointer;
       }
+
+      img {
+        vertical-align: middle;
+        max-height: 1em;
+        margin-right: 0.3em;
+      }
     }
   }
 
