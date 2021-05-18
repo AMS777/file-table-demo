@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 
-import { File } from '../../interfaces';
+import { File } from '../../types';
 import { filesFixture } from '../../fixtures';
 
 import FileTableHead from './FileTableHead';

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 
-import { File } from '../../interfaces';
-import { FILE_STATUS_AVAILABLE } from '../../config/CONSTANTS';
+import { File, FileStatus } from '../../types';
 
 interface FileTableRowProps {
   file: File;
@@ -27,7 +26,7 @@ function FileTableRow({ file }: FileTableRowProps) {
       <td>{file.device}</td>
       <td>{file.path}</td>
       <td>
-        {file.status === FILE_STATUS_AVAILABLE && <span className="file-status-available"></span>}
+        {file.status === FileStatus.Available && <span className="file-status-available"></span>}
       </td>
       <td className="file-table-status">{file.status}</td>
     </tr>

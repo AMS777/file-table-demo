@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { File } from '../../interfaces';
+import { File } from '../../types';
 
 import FileTableRow from './FileTableRow';
 

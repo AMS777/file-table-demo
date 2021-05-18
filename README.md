@@ -4,7 +4,7 @@ This demo shows a table where every row is a file that can be selected and downl
 
 It's a frontend demo developed with React.js. It doesn't include style frameworks like Material-UI.
 
-It uses functional tests with Cypress.
+It uses functional tests with Cypress. There is no complete test coverage as it's not necessary for demo purposes.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
