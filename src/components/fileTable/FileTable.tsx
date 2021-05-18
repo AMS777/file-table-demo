@@ -17,10 +17,13 @@ function FileTable() {
   }, []);
 
   return (
-    <table id="file-table" data-test="file-table">
-      <FileTableHead />
-      <FileTableBody files={files} />
-    </table>
+    <div id="file-table" data-test="homepage-border">
+      <header>Selected</header>
+      <table data-test="file-table">
+        <FileTableHead />
+        <FileTableBody files={files} />
+      </table>
+    </div>
   );
 }
 
