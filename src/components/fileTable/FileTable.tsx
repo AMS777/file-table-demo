@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
 
-import { File } from '../../types';
-import { filesFixture } from '../../fixtures';
+import { useFileTable } from './hooks';
 
 import FileTableToolbar from './FileTableToolbar';
 import FileTableHead from './FileTableHead';
@@ -11,30 +9,7 @@ import FileTableBody from './FileTableBody';
 import './styles.scss';
 
 function FileTable() {
-  const [files, setFiles] = useState<File[]>([]);
-  const [selectedFiles, setSelectedFiles] = useState(new Set<File>());
-
-  useEffect(() => {
-    setFiles(filesFixture);
-  }, []);
-
-  const handleSelectFile = (file: File) => {
-    if (selectedFiles.has(file)) {
-      selectedFiles.delete(file);
-    } else {
-      selectedFiles.add(file);
-    }
-    setSelectedFiles(new Set<File>(selectedFiles));
-  };
-
-  const handleSelectAllFiles = () => {
-    if (selectedFiles.size === files.length) {
-      selectedFiles.clear();
-    } else {
-      files.forEach((file: File) => selectedFiles.add(file));
-    }
-    setSelectedFiles(new Set<File>(selectedFiles));
-  };
+  const { files, selectedFiles, handleSelectFile, handleSelectAllFiles } = useFileTable();
 
   return (
     <div id="file-table" data-test="homepage-border">
