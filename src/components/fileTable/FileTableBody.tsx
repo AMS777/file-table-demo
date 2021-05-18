@@ -6,14 +6,20 @@ import FileTableRow from './FileTableRow';
 
 interface FileTableBodyProps {
   files: File[];
+  selectedFiles: Set<File>;
   handleSelectFile: (file: File) => void;
 }
 
-function FileTableBody({ files = [], handleSelectFile }: FileTableBodyProps) {
+function FileTableBody({ files = [], selectedFiles, handleSelectFile }: FileTableBodyProps) {
   return (
     <tbody>
       {files.map((file: File) => (
-        <FileTableRow key={file.device} file={file} handleSelectFile={handleSelectFile} />
+        <FileTableRow
+          key={file.device}
+          file={file}
+          isRowSelected={selectedFiles.has(file)}
+          handleSelectFile={handleSelectFile}
+        />
       ))}
     </tbody>
   );

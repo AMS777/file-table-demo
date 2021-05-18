@@ -32,7 +32,11 @@ function FileTable() {
       <FileTableToolbar files={files} selectedFiles={selectedFiles} />
       <table data-test="file-table">
         <FileTableHead />
-        <FileTableBody files={files} handleSelectFile={handleSelectFile} />
+        <FileTableBody
+          files={files}
+          selectedFiles={selectedFiles}
+          handleSelectFile={handleSelectFile}
+        />
       </table>
     </div>
   );

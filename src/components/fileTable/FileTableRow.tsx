@@ -1,20 +1,15 @@
 import * as React from 'react';
-import { useState } from 'react';
 
 import { File, FileStatus } from '../../types';
 
 interface FileTableRowProps {
   file: File;
+  isRowSelected: boolean;
   handleSelectFile: (file: File) => void;
 }
 
-function FileTableRow({ file, handleSelectFile }: FileTableRowProps) {
-  const [isRowSelected, setIsRowSelected] = useState(false);
-
-  const handleRowClick = () => {
-    setIsRowSelected(!isRowSelected);
-    handleSelectFile(file);
-  };
+function FileTableRow({ file, isRowSelected, handleSelectFile }: FileTableRowProps) {
+  const handleRowClick = () => handleSelectFile(file);
 
   return (
     <tr
