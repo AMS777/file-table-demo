@@ -7,12 +7,13 @@ import DownloadIcon from '../../images/download.svg';
 
 import './styles.scss';
 
-interface FileTableToolbaryProps {
+interface FileTableToolbarProps {
   files: File[];
   selectedFiles: Set<File>;
+  handleSelectAllFiles: () => void;
 }
 
-function FileTableToolbar({ files, selectedFiles }: FileTableToolbaryProps) {
+function FileTableToolbar({ files, selectedFiles, handleSelectAllFiles }: FileTableToolbarProps) {
   const [isSelectAllChecked, setIsSelectAllChecked] = useState(false);
 
   useEffect(() => {
@@ -52,7 +53,12 @@ function FileTableToolbar({ files, selectedFiles }: FileTableToolbaryProps) {
 
   return (
     <header>
-      <input type="checkbox" className="select-all-checkbox" checked={isSelectAllChecked} />
+      <input
+        type="checkbox"
+        className="select-all-checkbox"
+        checked={isSelectAllChecked}
+        onChange={handleSelectAllFiles}
+      />
       <span className="selected-files-count">
         {selectedFiles.size === 0 ? 'None Selected' : `Selected ${selectedFiles.size}`}
       </span>

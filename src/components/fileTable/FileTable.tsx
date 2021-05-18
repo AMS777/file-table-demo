@@ -27,9 +27,22 @@ function FileTable() {
     setSelectedFiles(new Set<File>(selectedFiles));
   };
 
+  const handleSelectAllFiles = () => {
+    if (selectedFiles.size === files.length) {
+      selectedFiles.clear();
+    } else {
+      files.forEach((file: File) => selectedFiles.add(file));
+    }
+    setSelectedFiles(new Set<File>(selectedFiles));
+  };
+
   return (
     <div id="file-table" data-test="homepage-border">
-      <FileTableToolbar files={files} selectedFiles={selectedFiles} />
+      <FileTableToolbar
+        files={files}
+        selectedFiles={selectedFiles}
+        handleSelectAllFiles={handleSelectAllFiles}
+      />
       <table data-test="file-table">
         <FileTableHead />
         <FileTableBody
