@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/file-table-demo/static/css/main.9449fff6.chunk.css",
+    "main.js": "/file-table-demo/static/js/main.6434eeb8.chunk.js",
+    "main.js.map": "/file-table-demo/static/js/main.6434eeb8.chunk.js.map",
+    "runtime-main.js": "/file-table-demo/static/js/runtime-main.6d8ccefc.js",
+    "runtime-main.js.map": "/file-table-demo/static/js/runtime-main.6d8ccefc.js.map",
+    "static/js/2.2fb38801.chunk.js": "/file-table-demo/static/js/2.2fb38801.chunk.js",
+    "static/js/2.2fb38801.chunk.js.map": "/file-table-demo/static/js/2.2fb38801.chunk.js.map",
+    "static/js/3.c6deb237.chunk.js": "/file-table-demo/static/js/3.c6deb237.chunk.js",
+    "static/js/3.c6deb237.chunk.js.map": "/file-table-demo/static/js/3.c6deb237.chunk.js.map",
+    "index.html": "/file-table-demo/index.html",
+    "static/css/main.9449fff6.chunk.css.map": "/file-table-demo/static/css/main.9449fff6.chunk.css.map",
+    "static/js/2.2fb38801.chunk.js.LICENSE.txt": "/file-table-demo/static/js/2.2fb38801.chunk.js.LICENSE.txt",
+    "static/media/download.b8e5c5d6.svg": "/file-table-demo/static/media/download.b8e5c5d6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d8ccefc.js",
+    "static/js/2.2fb38801.chunk.js",
+    "static/css/main.9449fff6.chunk.css",
+    "static/js/main.6434eeb8.chunk.js"
+  ]
+}
