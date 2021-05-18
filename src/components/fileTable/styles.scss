@@ -5,8 +5,17 @@
   box-shadow: 0.1em 0.3em $border-color-primary;
 
   header {
-    padding: 1em;
+    padding: 1em 0;
     border-bottom: 1px solid $border-color-primary;
+
+    .select-all-checkbox {
+      margin: 0 1em 0 0.5em;
+    }
+
+    .selected-files-count {
+      display: inline-block;
+      min-width: 7em;
+    }
 
     button {
       margin: -1em 1em;

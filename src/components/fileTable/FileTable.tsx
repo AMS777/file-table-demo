@@ -13,11 +13,30 @@ import './styles.scss';
 
 function FileTable() {
   const [files, setFiles] = useState<File[]>([]);
+  const [isSelectAllChecked, setIsSelectAllChecked] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState(new Set<File>());
 
   useEffect(() => {
     setFiles(filesFixture);
   }, []);
+
+  useEffect(() => {
+    const selectAllCheckbox: HTMLInputElement = document.querySelector(
+      '#file-table .select-all-checkbox',
+    )!;
+    selectAllCheckbox.indeterminate = false;
+
+    if (selectedFiles.size === 0) {
+      setIsSelectAllChecked(false);
+      return;
+    }
+    if (selectedFiles.size === files.length) {
+      setIsSelectAllChecked(true);
+      return;
+    }
+
+    selectAllCheckbox.indeterminate = true;
+  }, [selectedFiles, files]);
 
   const handleSelectFile = (file: File) => {
     if (selectedFiles.has(file)) {
@@ -48,7 +67,10 @@ function FileTable() {
   return (
     <div id="file-table" data-test="homepage-border">
       <header>
-        {selectedFiles.size === 0 ? 'None Selected' : `Selected ${selectedFiles.size}`}
+        <input type="checkbox" className="select-all-checkbox" checked={isSelectAllChecked} />
+        <span className="selected-files-count">
+          {selectedFiles.size === 0 ? 'None Selected' : `Selected ${selectedFiles.size}`}
+        </span>
         <button onClick={handleDownloadFiles}>
           <img src={DownloadIcon} alt="icon" />
           Download Selected
