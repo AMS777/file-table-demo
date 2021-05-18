@@ -5,12 +5,16 @@ import { File, FileStatus } from '../../types';
 
 interface FileTableRowProps {
   file: File;
+  handleSelectFile: (file: File) => void;
 }
 
-function FileTableRow({ file }: FileTableRowProps) {
+function FileTableRow({ file, handleSelectFile }: FileTableRowProps) {
   const [isRowSelected, setIsRowSelected] = useState(false);
 
-  const handleRowClick = () => setIsRowSelected(!isRowSelected);
+  const handleRowClick = () => {
+    setIsRowSelected(!isRowSelected);
+    handleSelectFile(file);
+  };
 
   return (
     <tr

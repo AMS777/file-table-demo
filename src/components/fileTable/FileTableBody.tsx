@@ -6,13 +6,14 @@ import FileTableRow from './FileTableRow';
 
 interface FileTableBodyProps {
   files: File[];
+  handleSelectFile: (file: File) => void;
 }
 
-function FileTableBody({ files = [] }: FileTableBodyProps) {
+function FileTableBody({ files = [], handleSelectFile }: FileTableBodyProps) {
   return (
     <tbody>
       {files.map((file: File) => (
-        <FileTableRow file={file} />
+        <FileTableRow file={file} handleSelectFile={handleSelectFile} />
       ))}
     </tbody>
   );

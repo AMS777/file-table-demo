@@ -11,17 +11,27 @@ import './styles.scss';
 
 function FileTable() {
   const [files, setFiles] = useState<File[]>([]);
+  const [selectedFiles, setSelectedFiles] = useState(new Set());
 
   useEffect(() => {
     setFiles(filesFixture);
   }, []);
 
+  const handleSelectFile = (file: File) => {
+    if (selectedFiles.has(file)) {
+      selectedFiles.delete(file);
+    } else {
+      selectedFiles.add(file);
+    }
+    setSelectedFiles(new Set(selectedFiles));
+  };
+
   return (
     <div id="file-table" data-test="homepage-border">
-      <header>Selected</header>
+      <header>Selected {selectedFiles.size}</header>
       <table data-test="file-table">
         <FileTableHead />
-        <FileTableBody files={files} />
+        <FileTableBody files={files} handleSelectFile={handleSelectFile} />
       </table>
     </div>
   );
