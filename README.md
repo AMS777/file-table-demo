@@ -1,12 +1,10 @@
 # File table demo
 
-This demo shows a table where every row is a file that can be selected and downloaded.
+This demo application shows a table where every row is a file that can be selected and downloaded (files are not actually downloaded but shown in an alert message).
 
-It's a frontend demo developed with React.js. It doesn't include style frameworks like Material-UI.
+It's a frontend demo developed with React.js, TypeScript, and SCSS. All the styles are done with CSS, it doesn't include style frameworks like Material-UI.
 
-It uses functional tests with Cypress. There is no complete test coverage as it's not necessary for demo purposes.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It uses functional tests with Cypress, and it's developed with TDD at the beginning. There is no complete test coverage as it's not necessary for demo purposes.
 
 ## Available Scripts
 
@@ -30,12 +28,5 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
